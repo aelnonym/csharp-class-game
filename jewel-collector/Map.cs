@@ -7,6 +7,17 @@ namespace jewel_collector
 {
     public class Map
     {
+        public (int,int) directionToCoord(char c, int x, int y){
+            switch(c){
+                case "w":
+                    return (x-1, y+1);
+                    break;
+                case "a":
+                case "s":
+                case "d":
+            }
+        }
+
         private Prop[,] map;
 
         public Map(int sizeX, int sizeY){
@@ -21,8 +32,14 @@ namespace jewel_collector
             return this.map.GetLength(1);
         }
 
+        public int moveProp(Prop prop, char direction){
+
+        }
+
         public void insertProp(Prop prop, int posX, int posY){
             map[posX,posY] = prop;
+            prop.X = posX;
+            prop.Y = posY;
         }
 
         public Prop getProp(int posX, int posY){
