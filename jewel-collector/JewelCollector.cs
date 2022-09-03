@@ -7,6 +7,7 @@ public class JewelCollector
             Console.WriteLine("Creating Map");
             Map mapa = new Map(10, 10);
             
+            
             Console.WriteLine("Enter the command: ");
             string command = Console.ReadLine();
 
