@@ -32,7 +32,7 @@ namespace jewel_collector
             return null;
         }
 
-        public int removeJewel(int posX, int posY){
+        public Jewel removeJewel(int posX, int posY){
             Jewel j = (Jewel) this.map[posX, posY];
             this.map[posX, posY] = null;
             return j;

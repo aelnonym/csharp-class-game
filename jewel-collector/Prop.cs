@@ -7,12 +7,14 @@ namespace jewel_collector
 {
     public class Prop
     {
-        private int X { public get; public set;}
-        private int Y  { public get; public set; }
+        public int X { get; set;}
+        public int Y  { get; set; }
 
-        private string name { public get; public set; }
+        public string name { get; set; }
 
-        private int value{public get; public set;}
+        public int value{get; set;}
+
+        public string type{get; set;}
 
 
     }

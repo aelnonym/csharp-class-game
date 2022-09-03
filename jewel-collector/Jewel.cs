@@ -9,7 +9,7 @@ namespace jewel_collector
     public class Jewel : Prop
     {
         public Jewel(string type){
-            this.setType = type;
+            this.type = type;
             switch(type) {
                 case "RED":
                     this.value = 100;
@@ -18,10 +18,10 @@ namespace jewel_collector
                     this.value = 10;
                     break;
                 case "GREEN":
-                    this.setValue(50);
+                    this.value = 50;
                     break;
                 default:
-                    this.setValue(0);
+                    this.value = 0;
                     break;
             }
         }

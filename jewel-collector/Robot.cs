@@ -22,7 +22,7 @@ namespace jewel_collector
         public int getValue(){
             int value = 0;
             this.backpack.ForEach((prop) =>{
-                value += prop.getValue();
+                value += prop.value;
             });
             return value;
         }
