@@ -11,15 +11,21 @@ namespace jewel_collector
 
         public Robot(){
             this.backpack = new List<Prop>();
+            this.image = "ME";
         }
         
         public void collect(List<Prop> jewels){
             jewels.ForEach((jewel) => {
-                backpack.Add(jewel);
+                if(jewel is Jewel)
+                    backpack.Add(jewel);
             });
         }
 
-        public int getValue(){
+        public int getBackpackSize(){
+            return backpack.Count;
+        }
+
+        public int getBackpackValue(){
             int value = 0;
             this.backpack.ForEach((prop) =>{
                 value += prop.value;

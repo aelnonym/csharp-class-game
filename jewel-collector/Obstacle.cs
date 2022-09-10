@@ -2,29 +2,24 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using jewel_collector;
 
 namespace jewel_collector
 {
-    public class Jewel : Prop
+    public class Obstacle : Prop
     {
-        public Jewel(string type){
+        public Obstacle(string type){
             this.type = type;
             switch(type) {
-                case "RED":
-                    this.image = "JR";
+                case "WATER":
+                    this.image = "##";
                     this.value = 100;
                     break;
-                case "BLUE":
-                    this.image = "JB";
+                case "TREE":
+                    this.image = "$$";
                     this.value = 10;
                     break;
-                case "GREEN":
-                    this.image = "JG";
-                    this.value = 50;
-                    break;
                 default:
-                    this.image = "J?";
+                    this.image = "O?";
                     this.value = 0;
                     break;
             }
