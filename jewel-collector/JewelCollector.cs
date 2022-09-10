@@ -3,6 +3,7 @@ public class JewelCollector
 {
     public static void Main() {
         bool running = true;
+        ConsoleKeyInfo keyinfo;
          // Crie Mapa Dimensao 10x10
         Console.WriteLine("Creating Map");
         Map mapa = new Map(10, 10);
@@ -19,7 +20,7 @@ public class JewelCollector
         foreach(int i in Enumerable.Range(0, 7)){
             mapa.insertProp(new Obstacle("WATER"), 5, i);
         }
-        
+
         mapa.insertProp(new Obstacle("TREE"), 5, 9);
         mapa.insertProp(new Obstacle("TREE"), 3, 9);
         mapa.insertProp(new Obstacle("TREE"), 8, 3);
@@ -48,4 +49,6 @@ public class JewelCollector
             }
         } while (running);
     }
+
+    
 }
