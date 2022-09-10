@@ -7,6 +7,11 @@ namespace jewel_collector
 {
     public class Obstacle : Prop
     {
+
+        /// <summary>
+        /// Construtor
+        /// </summary>
+        /// <param name="type"> Tipo do obstaculo </param>
         public Obstacle(string type){
             this.type = type;
             switch(type) {

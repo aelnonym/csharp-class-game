@@ -8,6 +8,15 @@ namespace jewel_collector
     public class Map
     {
         private Robot player;
+        private Prop[,] map;
+
+        /// <summary>
+        ///     Uses direction input to generate map coords
+        /// </summary>
+        /// <param name="c">Direction</param>
+        /// <param name="x">Coord X</param>
+        /// <param name="y">Coord Y</param>
+        /// <returns>Tuple containing coords</returns>
         public (int,int) directionToCoord(char c, int x, int y){
             switch(c){
                 case 'w':
@@ -23,14 +32,23 @@ namespace jewel_collector
             }
         }
 
+        /// <summary>
+        ///     Limita os valores das coordenadas x e y de acordo com os limites do mapa
+        /// </summary>
+        /// <param name="x"></param>
+        /// <param name="y"></param>
+        /// <returns></returns>
         private (int, int) solveRange(int x, int y){
             int outx = x < 0 ? 0 : (x > this.getMaxX() - 1 ? this.getMaxX() - 1 : x);
             int outy = y < 0 ? 0 : (y > this.getMaxY() - 1 ? this.getMaxY() - 1 : y);
             return (outx, outy);
         }
 
-        private Prop[,] map;
-
+        /// <summary>
+        /// Construtor de Mapa
+        /// </summary>
+        /// <param name="sizeX">Limite vertical do mapa</param>
+        /// <param name="sizeY">Limite horizontal do mapa</param>
         public Map(int sizeX, int sizeY){
             this.map = new Prop[sizeX,sizeY];
         }
@@ -47,6 +65,7 @@ namespace jewel_collector
             (int x, int y) pos = directionToCoord(direction, prop.X, prop.Y);
             Prop intent = getProp(pos);
             Console.WriteLine($"Posicao {pos} : {intent}\n");
+            
             if (intent == null){
                 this.map[prop.X, prop.Y] = null;
                 this.map[pos.x, pos.y] = prop;
@@ -76,7 +95,7 @@ namespace jewel_collector
         }
 
         public Prop getProp(int posX, int posY){
-            if(posX >= 0 && posX < this.getMaxX() - 1 && posY >= 0 && posY < this.getMaxY() - 1){
+            if(posX >= 0 && posX <= this.getMaxX() - 1 && posY >= 0 && posY <= this.getMaxY() - 1){
                 return this.map[posX,posY];
             }
             return null;
@@ -84,7 +103,7 @@ namespace jewel_collector
 
         public Prop getProp((int X, int Y) pos){
             Console.WriteLine(pos);
-            if(pos.X >= 0 && pos.X < this.getMaxX() - 1 && pos.Y >= 0 && pos.Y < this.getMaxY() - 1){
+            if(pos.X >= 0 && pos.X <= this.getMaxX() - 1 && pos.Y >= 0 && pos.Y <= this.getMaxY() - 1){
                 return this.map[pos.X, pos.Y];
             }
             return null;
@@ -119,7 +138,7 @@ namespace jewel_collector
                     Console.Write("\n");
                 }
             }
-            Console.WriteLine($"Bag total items: ${this.player.getBackpackSize()} | Bag total value: ${this.player.getBackpackValue()}");
+            Console.WriteLine($"Bag total items: {this.player.getBackpackSize()} | Bag total value: {this.player.getBackpackValue()}");
         }
 
 

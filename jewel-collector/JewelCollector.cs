@@ -19,7 +19,7 @@ public class JewelCollector
         foreach(int i in Enumerable.Range(0, 7)){
             mapa.insertProp(new Obstacle("WATER"), 5, i);
         }
-
+        
         mapa.insertProp(new Obstacle("TREE"), 5, 9);
         mapa.insertProp(new Obstacle("TREE"), 3, 9);
         mapa.insertProp(new Obstacle("TREE"), 8, 3);
@@ -37,11 +37,13 @@ public class JewelCollector
             if (command.Equals("quit")) {
                 running = false;
             } else if (command.Equals("w") || command.Equals("a") || command.Equals("s") || command.Equals("d")) { 
+                Console.Clear();
                 if(mapa.movePlayer(command[0]) != 0){
                     Console.WriteLine("Obstacle");
                 }
                 mapa.show();
-            } else if (command.Equals("g")) { 
+            } else if (command.Equals("g")) {
+                Console.Clear();
                 mapa.show();
             }
         } while (running);
