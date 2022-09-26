@@ -3,49 +3,30 @@
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classjewel__collector_1_1_map_aeaf37af7ab7a42c10655f3624c6e3548}\label{classjewel__collector_1_1_map_aeaf37af7ab7a42c10655f3624c6e3548}} 
-\mbox{\hyperlink{classjewel__collector_1_1_map_a4223e01dd6296835a449b95363fd40be}{int}} {\bfseries direction\+To\+Coord} (char c, \mbox{\hyperlink{classjewel__collector_1_1_map_a4223e01dd6296835a449b95363fd40be}{int}} x, \mbox{\hyperlink{classjewel__collector_1_1_map_a4223e01dd6296835a449b95363fd40be}{int}} y)
-\item 
-\mbox{\hyperlink{classjewel__collector_1_1_map_a46bc43873bff118696ea67a566182fe9}{Map}} (\mbox{\hyperlink{classjewel__collector_1_1_map_a4223e01dd6296835a449b95363fd40be}{int}} sizeX=10, \mbox{\hyperlink{classjewel__collector_1_1_map_a4223e01dd6296835a449b95363fd40be}{int}} sizeY=10, \mbox{\hyperlink{classjewel__collector_1_1_map_a4223e01dd6296835a449b95363fd40be}{int}} level=1)
+\mbox{\hyperlink{classjewel__collector_1_1_coord}{Coord}} \mbox{\hyperlink{classjewel__collector_1_1_map_a202a400bbb55579d8b9fc4c848a0e762}{direction\+To\+Coord}} (char c, int x, int y)
+\begin{DoxyCompactList}\small\item\em Converte uma direção e coordenadas x,y em uma coordenada na direção escolhida  \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classjewel__collector_1_1_map_a46bc43873bff118696ea67a566182fe9}{Map}} (int sizeX=10, int sizeY=10, int level=1)
 \begin{DoxyCompactList}\small\item\em Construtor de Mapa  \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classjewel__collector_1_1_map_a093e5c35bb63625d055f0cb4d28529cb}\label{classjewel__collector_1_1_map_a093e5c35bb63625d055f0cb4d28529cb}} 
-\mbox{\hyperlink{classjewel__collector_1_1_map_a4223e01dd6296835a449b95363fd40be}{int}} {\bfseries move\+Prop} (\mbox{\hyperlink{classjewel__collector_1_1_prop}{Prop}} prop, char direction)
-\item 
-\mbox{\Hypertarget{classjewel__collector_1_1_map_a93bcf44fe38ad13a3fdd6f6786654013}\label{classjewel__collector_1_1_map_a93bcf44fe38ad13a3fdd6f6786654013}} 
-\mbox{\hyperlink{classjewel__collector_1_1_map_a4223e01dd6296835a449b95363fd40be}{int}} {\bfseries move\+Player} (char direction)
-\item 
-\mbox{\Hypertarget{classjewel__collector_1_1_map_a7a061cbe204108084c1d4eb8ae769108}\label{classjewel__collector_1_1_map_a7a061cbe204108084c1d4eb8ae769108}} 
-void {\bfseries set\+Player} (\mbox{\hyperlink{classjewel__collector_1_1_robot}{Robot}} robot, \mbox{\hyperlink{classjewel__collector_1_1_map_a4223e01dd6296835a449b95363fd40be}{int}} x, \mbox{\hyperlink{classjewel__collector_1_1_map_a4223e01dd6296835a449b95363fd40be}{int}} y)
-\item 
-\mbox{\Hypertarget{classjewel__collector_1_1_map_a675c87ce2b75683eb9d3c08b41c2981a}\label{classjewel__collector_1_1_map_a675c87ce2b75683eb9d3c08b41c2981a}} 
-void {\bfseries insert\+Prop} (\mbox{\hyperlink{classjewel__collector_1_1_prop}{Prop}} prop, \mbox{\hyperlink{classjewel__collector_1_1_map_a4223e01dd6296835a449b95363fd40be}{int}} posX, \mbox{\hyperlink{classjewel__collector_1_1_map_a4223e01dd6296835a449b95363fd40be}{int}} posY)
-\item 
-\mbox{\Hypertarget{classjewel__collector_1_1_map_a4683ec173475f9ff4381e72c2dd68aac}\label{classjewel__collector_1_1_map_a4683ec173475f9ff4381e72c2dd68aac}} 
-\mbox{\hyperlink{classjewel__collector_1_1_prop}{Prop}} {\bfseries get\+Prop} (\mbox{\hyperlink{classjewel__collector_1_1_map_a4223e01dd6296835a449b95363fd40be}{int}} posX, \mbox{\hyperlink{classjewel__collector_1_1_map_a4223e01dd6296835a449b95363fd40be}{int}} posY)
-\item 
-\mbox{\Hypertarget{classjewel__collector_1_1_map_a9c67b74aeaeb3807ce177cd3157767fd}\label{classjewel__collector_1_1_map_a9c67b74aeaeb3807ce177cd3157767fd}} 
-\mbox{\hyperlink{classjewel__collector_1_1_prop}{Prop}} {\bfseries get\+Prop} ((\mbox{\hyperlink{classjewel__collector_1_1_map_a4223e01dd6296835a449b95363fd40be}{int}} X, \mbox{\hyperlink{classjewel__collector_1_1_map_a4223e01dd6296835a449b95363fd40be}{int}} Y) pos)
-\item 
-\mbox{\Hypertarget{classjewel__collector_1_1_map_a91af15452864e920f53316276824d7c9}\label{classjewel__collector_1_1_map_a91af15452864e920f53316276824d7c9}} 
-\mbox{\hyperlink{classjewel__collector_1_1_jewel}{Jewel}} {\bfseries remove\+Jewel} (\mbox{\hyperlink{classjewel__collector_1_1_map_a4223e01dd6296835a449b95363fd40be}{int}} posX, \mbox{\hyperlink{classjewel__collector_1_1_map_a4223e01dd6296835a449b95363fd40be}{int}} posY)
-\item 
-\mbox{\Hypertarget{classjewel__collector_1_1_map_ab987abb004a2205162abafdb80617502}\label{classjewel__collector_1_1_map_ab987abb004a2205162abafdb80617502}} 
-\mbox{\hyperlink{classjewel__collector_1_1_jewel}{Jewel}} {\bfseries remove\+Jewel} (\mbox{\hyperlink{classjewel__collector_1_1_jewel}{Jewel}} jewel)
-\item 
-\mbox{\Hypertarget{classjewel__collector_1_1_map_aa4c5600a5ed02d937947007a05d6a6b5}\label{classjewel__collector_1_1_map_aa4c5600a5ed02d937947007a05d6a6b5}} 
-List$<$ \mbox{\hyperlink{classjewel__collector_1_1_prop}{Prop}} $>$ {\bfseries get\+Neighborhood} (\mbox{\hyperlink{classjewel__collector_1_1_map_a4223e01dd6296835a449b95363fd40be}{int}} posX, \mbox{\hyperlink{classjewel__collector_1_1_map_a4223e01dd6296835a449b95363fd40be}{int}} posY)
-\item 
-\mbox{\Hypertarget{classjewel__collector_1_1_map_a887a9b727cf3f3bdd216cae006813f67}\label{classjewel__collector_1_1_map_a887a9b727cf3f3bdd216cae006813f67}} 
-bool {\bfseries is\+Done} ()
-\item 
-\mbox{\Hypertarget{classjewel__collector_1_1_map_a4e6f86106588d7d1756159c71f8513c0}\label{classjewel__collector_1_1_map_a4e6f86106588d7d1756159c71f8513c0}} 
-void {\bfseries show} (bool debug=false)
-\end{DoxyCompactItemize}
-\doxysubsection*{Public Attributes}
-\begin{DoxyCompactItemize}
-\item 
-\mbox{\hyperlink{classjewel__collector_1_1_map_a4223e01dd6296835a449b95363fd40be}{int}}
-\begin{DoxyCompactList}\small\item\em Uses direction input to generate map coords  \end{DoxyCompactList}\end{DoxyCompactItemize}
+bool \mbox{\hyperlink{classjewel__collector_1_1_map_a2b920ae35c2d763fa24c296e4dc6a4da}{move\+Player}} (char direction)
+\begin{DoxyCompactList}\small\item\em Tenta mover o robo na direção escolhida e obtendo sucesso chama a verificação de colisão  \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classjewel__collector_1_1_map_a7a061cbe204108084c1d4eb8ae769108}{set\+Player}} (\mbox{\hyperlink{classjewel__collector_1_1_robot}{Robot}} robot, int x, int y)
+\begin{DoxyCompactList}\small\item\em Coloca o robô no mapa  \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classjewel__collector_1_1_prop}{Prop}} \mbox{\hyperlink{classjewel__collector_1_1_map_a4683ec173475f9ff4381e72c2dd68aac}{get\+Prop}} (int posX, int posY)
+\begin{DoxyCompactList}\small\item\em Tenta pegar o que tem nessa posição do mapa, se existir retorna esta \mbox{\hyperlink{classjewel__collector_1_1_prop}{Prop}}  \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classjewel__collector_1_1_prop}{Prop}} \mbox{\hyperlink{classjewel__collector_1_1_map_a78c8bdc5298659d2ef75985886b948f8}{get\+Prop}} (\mbox{\hyperlink{classjewel__collector_1_1_coord}{Coord}} pos)
+\begin{DoxyCompactList}\small\item\em Tenta pegar o que tem nessa \mbox{\hyperlink{classjewel__collector_1_1_coord}{Coord}} do mapa, se existir retorna esta \mbox{\hyperlink{classjewel__collector_1_1_prop}{Prop}}, senão retorna \mbox{\hyperlink{classjewel__collector_1_1_coord_out_of_bounds_exception}{Coord\+Out\+Of\+Bounds\+Exception}}  \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classjewel__collector_1_1_jewel}{Jewel}} \mbox{\hyperlink{classjewel__collector_1_1_map_a91af15452864e920f53316276824d7c9}{remove\+Jewel}} (int posX, int posY)
+\begin{DoxyCompactList}\small\item\em Remove a joia na posição e reduz o contador de joias do mapa  \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classjewel__collector_1_1_jewel}{Jewel}} \mbox{\hyperlink{classjewel__collector_1_1_map_ab987abb004a2205162abafdb80617502}{remove\+Jewel}} (\mbox{\hyperlink{classjewel__collector_1_1_jewel}{Jewel}} jewel)
+\begin{DoxyCompactList}\small\item\em Remove referencia para joia do mapa e reduz o contador de joias do mapa  \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{classjewel__collector_1_1_prop}{Prop}} $>$ \mbox{\hyperlink{classjewel__collector_1_1_map_aa4c5600a5ed02d937947007a05d6a6b5}{get\+Neighborhood}} (int posX, int posY)
+\begin{DoxyCompactList}\small\item\em Retorna uma lista com Props que estão na vizinhança da posição enviada como parametro  \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{classjewel__collector_1_1_coord}{Coord}} $>$ \mbox{\hyperlink{classjewel__collector_1_1_map_afbeab1b3aca70d337529a7b027d8656f}{get\+Neighborhood\+Coord}} (int posX, int posY)
+\begin{DoxyCompactList}\small\item\em Retorna uma lista de coordenadas vizinhas a posição enviada como parâmetro  \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classjewel__collector_1_1_map_a887a9b727cf3f3bdd216cae006813f67}{is\+Done}} ()
+\begin{DoxyCompactList}\small\item\em Retorna verdadeiro se acabaram as joias a serem coletadas  \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classjewel__collector_1_1_map_a4e6f86106588d7d1756159c71f8513c0}{show}} (bool debug=false)
+\begin{DoxyCompactList}\small\item\em Escreve no console o estado atual do mapa, nível atual e outras informações referentes ao robo  \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
@@ -53,7 +34,7 @@ void {\bfseries show} (bool debug=false)
 \index{jewel\_collector.Map@{jewel\_collector.Map}!Map@{Map}}
 \index{Map@{Map}!jewel\_collector.Map@{jewel\_collector.Map}}
 \doxysubsubsection{\texorpdfstring{Map()}{Map()}}
-{\footnotesize\ttfamily jewel\+\_\+collector.\+Map.\+Map (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classjewel__collector_1_1_map_a4223e01dd6296835a449b95363fd40be}{int}}}]{sizeX = {\ttfamily 10},  }\item[{\mbox{\hyperlink{classjewel__collector_1_1_map_a4223e01dd6296835a449b95363fd40be}{int}}}]{sizeY = {\ttfamily 10},  }\item[{\mbox{\hyperlink{classjewel__collector_1_1_map_a4223e01dd6296835a449b95363fd40be}{int}}}]{level = {\ttfamily 1} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily jewel\+\_\+collector.\+Map.\+Map (\begin{DoxyParamCaption}\item[{int}]{sizeX = {\ttfamily 10},  }\item[{int}]{sizeY = {\ttfamily 10},  }\item[{int}]{level = {\ttfamily 1} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -65,38 +46,26 @@ Construtor de Mapa
 \hline
 {\em sizeY} & Limite horizontal do mapa\\
 \hline
+{\em level} & Nivel do mapa\\
+\hline
 \end{DoxyParams}
 
 
-\doxysubsection{Member Data Documentation}
-\mbox{\Hypertarget{classjewel__collector_1_1_map_a4223e01dd6296835a449b95363fd40be}\label{classjewel__collector_1_1_map_a4223e01dd6296835a449b95363fd40be}} 
-\index{jewel\_collector.Map@{jewel\_collector.Map}!int@{int}}
-\index{int@{int}!jewel\_collector.Map@{jewel\_collector.Map}}
-\doxysubsubsection{\texorpdfstring{int}{int}}
-{\footnotesize\ttfamily jewel\+\_\+collector.\+Map.\+int}
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classjewel__collector_1_1_map_a202a400bbb55579d8b9fc4c848a0e762}\label{classjewel__collector_1_1_map_a202a400bbb55579d8b9fc4c848a0e762}} 
+\index{jewel\_collector.Map@{jewel\_collector.Map}!directionToCoord@{directionToCoord}}
+\index{directionToCoord@{directionToCoord}!jewel\_collector.Map@{jewel\_collector.Map}}
+\doxysubsubsection{\texorpdfstring{directionToCoord()}{directionToCoord()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classjewel__collector_1_1_coord}{Coord}} jewel\+\_\+collector.\+Map.\+direction\+To\+Coord (\begin{DoxyParamCaption}\item[{char}]{c,  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
-Uses direction input to generate map coords  
-
-Limita os valores das coordenadas x e y de acordo com os limites do mapa 
+Converte uma direção e coordenadas x,y em uma coordenada na direção escolhida  
 
 
 \begin{DoxyParams}{Parameters}
-{\em c} & Direction\\
+{\em c} & char representando direção\\
 \hline
-{\em x} & Coord X\\
-\hline
-{\em y} & Coord Y\\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-Tuple containing coords
-\end{DoxyReturn}
-
-
-
-\begin{DoxyParams}{Parameters}
 {\em x} & \\
 \hline
 {\em y} & \\
@@ -105,6 +74,187 @@ Tuple containing coords
 \begin{DoxyReturn}{Returns}
 
 \end{DoxyReturn}
+\mbox{\Hypertarget{classjewel__collector_1_1_map_aa4c5600a5ed02d937947007a05d6a6b5}\label{classjewel__collector_1_1_map_aa4c5600a5ed02d937947007a05d6a6b5}} 
+\index{jewel\_collector.Map@{jewel\_collector.Map}!getNeighborhood@{getNeighborhood}}
+\index{getNeighborhood@{getNeighborhood}!jewel\_collector.Map@{jewel\_collector.Map}}
+\doxysubsubsection{\texorpdfstring{getNeighborhood()}{getNeighborhood()}}
+{\footnotesize\ttfamily List$<$ \mbox{\hyperlink{classjewel__collector_1_1_prop}{Prop}} $>$ jewel\+\_\+collector.\+Map.\+get\+Neighborhood (\begin{DoxyParamCaption}\item[{int}]{posX,  }\item[{int}]{posY }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retorna uma lista com Props que estão na vizinhança da posição enviada como parametro  
+
+
+\begin{DoxyParams}{Parameters}
+{\em posX} & \\
+\hline
+{\em posY} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classjewel__collector_1_1_map_afbeab1b3aca70d337529a7b027d8656f}\label{classjewel__collector_1_1_map_afbeab1b3aca70d337529a7b027d8656f}} 
+\index{jewel\_collector.Map@{jewel\_collector.Map}!getNeighborhoodCoord@{getNeighborhoodCoord}}
+\index{getNeighborhoodCoord@{getNeighborhoodCoord}!jewel\_collector.Map@{jewel\_collector.Map}}
+\doxysubsubsection{\texorpdfstring{getNeighborhoodCoord()}{getNeighborhoodCoord()}}
+{\footnotesize\ttfamily List$<$ \mbox{\hyperlink{classjewel__collector_1_1_coord}{Coord}} $>$ jewel\+\_\+collector.\+Map.\+get\+Neighborhood\+Coord (\begin{DoxyParamCaption}\item[{int}]{posX,  }\item[{int}]{posY }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retorna uma lista de coordenadas vizinhas a posição enviada como parâmetro  
+
+
+\begin{DoxyParams}{Parameters}
+{\em posX} & \\
+\hline
+{\em posY} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classjewel__collector_1_1_map_a78c8bdc5298659d2ef75985886b948f8}\label{classjewel__collector_1_1_map_a78c8bdc5298659d2ef75985886b948f8}} 
+\index{jewel\_collector.Map@{jewel\_collector.Map}!getProp@{getProp}}
+\index{getProp@{getProp}!jewel\_collector.Map@{jewel\_collector.Map}}
+\doxysubsubsection{\texorpdfstring{getProp()}{getProp()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classjewel__collector_1_1_prop}{Prop}} jewel\+\_\+collector.\+Map.\+get\+Prop (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classjewel__collector_1_1_coord}{Coord}}}]{pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Tenta pegar o que tem nessa \mbox{\hyperlink{classjewel__collector_1_1_coord}{Coord}} do mapa, se existir retorna esta \mbox{\hyperlink{classjewel__collector_1_1_prop}{Prop}}, senão retorna \mbox{\hyperlink{classjewel__collector_1_1_coord_out_of_bounds_exception}{Coord\+Out\+Of\+Bounds\+Exception}}  
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classjewel__collector_1_1_map_a4683ec173475f9ff4381e72c2dd68aac}\label{classjewel__collector_1_1_map_a4683ec173475f9ff4381e72c2dd68aac}} 
+\index{jewel\_collector.Map@{jewel\_collector.Map}!getProp@{getProp}}
+\index{getProp@{getProp}!jewel\_collector.Map@{jewel\_collector.Map}}
+\doxysubsubsection{\texorpdfstring{getProp()}{getProp()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classjewel__collector_1_1_prop}{Prop}} jewel\+\_\+collector.\+Map.\+get\+Prop (\begin{DoxyParamCaption}\item[{int}]{posX,  }\item[{int}]{posY }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Tenta pegar o que tem nessa posição do mapa, se existir retorna esta \mbox{\hyperlink{classjewel__collector_1_1_prop}{Prop}}  
+
+
+\begin{DoxyParams}{Parameters}
+{\em posX} & \\
+\hline
+{\em posY} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classjewel__collector_1_1_map_a887a9b727cf3f3bdd216cae006813f67}\label{classjewel__collector_1_1_map_a887a9b727cf3f3bdd216cae006813f67}} 
+\index{jewel\_collector.Map@{jewel\_collector.Map}!isDone@{isDone}}
+\index{isDone@{isDone}!jewel\_collector.Map@{jewel\_collector.Map}}
+\doxysubsubsection{\texorpdfstring{isDone()}{isDone()}}
+{\footnotesize\ttfamily bool jewel\+\_\+collector.\+Map.\+is\+Done (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retorna verdadeiro se acabaram as joias a serem coletadas  
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classjewel__collector_1_1_map_a2b920ae35c2d763fa24c296e4dc6a4da}\label{classjewel__collector_1_1_map_a2b920ae35c2d763fa24c296e4dc6a4da}} 
+\index{jewel\_collector.Map@{jewel\_collector.Map}!movePlayer@{movePlayer}}
+\index{movePlayer@{movePlayer}!jewel\_collector.Map@{jewel\_collector.Map}}
+\doxysubsubsection{\texorpdfstring{movePlayer()}{movePlayer()}}
+{\footnotesize\ttfamily bool jewel\+\_\+collector.\+Map.\+move\+Player (\begin{DoxyParamCaption}\item[{char}]{direction }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Tenta mover o robo na direção escolhida e obtendo sucesso chama a verificação de colisão  
+
+
+\begin{DoxyParams}{Parameters}
+{\em direction} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classjewel__collector_1_1_map_a91af15452864e920f53316276824d7c9}\label{classjewel__collector_1_1_map_a91af15452864e920f53316276824d7c9}} 
+\index{jewel\_collector.Map@{jewel\_collector.Map}!removeJewel@{removeJewel}}
+\index{removeJewel@{removeJewel}!jewel\_collector.Map@{jewel\_collector.Map}}
+\doxysubsubsection{\texorpdfstring{removeJewel()}{removeJewel()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classjewel__collector_1_1_jewel}{Jewel}} jewel\+\_\+collector.\+Map.\+remove\+Jewel (\begin{DoxyParamCaption}\item[{int}]{posX,  }\item[{int}]{posY }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Remove a joia na posição e reduz o contador de joias do mapa  
+
+
+\begin{DoxyParams}{Parameters}
+{\em posX} & \\
+\hline
+{\em posY} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classjewel__collector_1_1_map_ab987abb004a2205162abafdb80617502}\label{classjewel__collector_1_1_map_ab987abb004a2205162abafdb80617502}} 
+\index{jewel\_collector.Map@{jewel\_collector.Map}!removeJewel@{removeJewel}}
+\index{removeJewel@{removeJewel}!jewel\_collector.Map@{jewel\_collector.Map}}
+\doxysubsubsection{\texorpdfstring{removeJewel()}{removeJewel()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classjewel__collector_1_1_jewel}{Jewel}} jewel\+\_\+collector.\+Map.\+remove\+Jewel (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classjewel__collector_1_1_jewel}{Jewel}}}]{jewel }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Remove referencia para joia do mapa e reduz o contador de joias do mapa  
+
+
+\begin{DoxyParams}{Parameters}
+{\em jewel} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classjewel__collector_1_1_map_a7a061cbe204108084c1d4eb8ae769108}\label{classjewel__collector_1_1_map_a7a061cbe204108084c1d4eb8ae769108}} 
+\index{jewel\_collector.Map@{jewel\_collector.Map}!setPlayer@{setPlayer}}
+\index{setPlayer@{setPlayer}!jewel\_collector.Map@{jewel\_collector.Map}}
+\doxysubsubsection{\texorpdfstring{setPlayer()}{setPlayer()}}
+{\footnotesize\ttfamily void jewel\+\_\+collector.\+Map.\+set\+Player (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classjewel__collector_1_1_robot}{Robot}}}]{robot,  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Coloca o robô no mapa  
+
+
+\begin{DoxyParams}{Parameters}
+{\em robot} & \\
+\hline
+{\em x} & \\
+\hline
+{\em y} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjewel__collector_1_1_map_a4e6f86106588d7d1756159c71f8513c0}\label{classjewel__collector_1_1_map_a4e6f86106588d7d1756159c71f8513c0}} 
+\index{jewel\_collector.Map@{jewel\_collector.Map}!show@{show}}
+\index{show@{show}!jewel\_collector.Map@{jewel\_collector.Map}}
+\doxysubsubsection{\texorpdfstring{show()}{show()}}
+{\footnotesize\ttfamily void jewel\+\_\+collector.\+Map.\+show (\begin{DoxyParamCaption}\item[{bool}]{debug = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Escreve no console o estado atual do mapa, nível atual e outras informações referentes ao robo  
+
+
+\begin{DoxyParams}{Parameters}
+{\em debug} & \\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

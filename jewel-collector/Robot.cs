@@ -7,59 +7,126 @@ namespace jewel_collector
 {
     public class Robot : Prop
     {
+        /// <summary>
+        /// Inventário do robo
+        /// </summary>
         private List<Prop> backpack;
 
-        public int energy {get; private set;}
+        /// <summary>
+        /// Energia do robo
+        /// </summary>
+        /// <value></value>
+        public int energy { get; private set; }
 
+        private bool cheating = false;
+
+        /// <summary>
+        /// Referencia para o mapa aonde o robo está
+        /// </summary>
         private Map map;
 
-        public Robot(Map map){
+        public Robot(Map map)
+        {
             this.backpack = new List<Prop>();
             this.map = map;
             this.image = "ME";
             this.energy = 5;
         }
-        
-        public void collect(List<Prop> jewels){
-            jewels.ForEach((jewel) => {
-                if(jewel is Jewel){
-                    if(jewel is Rechargeable) ((Rechargeable) jewel).Recharge(this);
-                    backpack.Add(map.removeJewel((Jewel) jewel));
-                    //map.removeJewel((Jewel) jewel);
+
+        /// <summary>
+        /// Escreve no console se KonamiKode estiver ativo
+        /// </summary>
+        public void status()
+        {
+            if (cheating)
+            {
+                Console.WriteLine("KonamiCode Enabled!");
+            }
+        }
+        /// <summary>
+        /// Verifica se o KonamiKode está ativo e se a tecla passada como parâmetro é a tecla escondida
+        /// </summary>
+        /// <param name="move"></param>
+        /// <returns></returns>
+        public bool checkCheatMove(string move)
+        {
+            if (cheating && move == "O")
+            {
+                return true;
+            }
+            return false;
+        }
+        /// <summary>
+        /// Adiciona todas as jóias de uma lista para o inventário, inclusive carregando a energia caso a jóia possibilite
+        /// </summary>
+        /// <param name="jewels"></param>
+        public void collect(List<Prop> jewels)
+        {
+            jewels.ForEach((jewel) =>
+            {
+                if (jewel is Jewel)
+                {
+                    if (jewel is Rechargeable) ((Rechargeable)jewel).Recharge(this);
+                    backpack.Add(map.removeJewel((Jewel)jewel));
+                    Console.WriteLine($"Added {jewel.image}(Value: {jewel.value}) to bag.");
                 }
             });
         }
-
-        public void recharge(int qtd){
+        /// <summary>
+        /// Recarrega a energia do robô com a quantidade informada
+        /// </summary>
+        /// <param name="qtd">quantia de energia</param>
+        public void recharge(int qtd)
+        {
             this.energy += qtd;
         }
-
-        public void collect(){
-            collect(this.map.getNeighborhood(this.X, this.Y));
-        }
-
-        public void collect(Jewel jewel){
-            backpack.Add(jewel);
-            map.removeJewel(jewel.X, jewel.Y);
-        }
-
-        public int getBackpackSize(){
+        /// <summary>
+        /// Retorna quantas joias existem no inventário
+        /// </summary>
+        /// <returns></returns>
+        public int getBackpackSize()
+        {
             return backpack.Count;
         }
-
-        public int getBackpackValue(){
+        /// <summary>
+        /// Retorna a soma dos valores das joias no inventário
+        /// </summary>
+        /// <returns></returns>
+        public int getBackpackValue()
+        {
             int value = 0;
-            this.backpack.ForEach((prop) =>{
+            this.backpack.ForEach((prop) =>
+            {
                 value += prop.value;
             });
             return value;
         }
-
-        public void move(char direction){
-            Console.WriteLine(direction);
-            try{
-                int value = map.movePlayer(direction);
-                if (value == 0){
+        /// <summary>
+        /// Ativa KonamiCode
+        /// </summary>
+        public void KonamiCode()
+        {
+            this.cheating = true;
+        }
+        /// <summary>
+        /// Retorna se o robô tem energia suficiente para alguma ação, incluindo coleta da vizinhança
+        /// </summary>
+        /// <returns></returns>
+        public bool HasEnergy()
+        {
+            return energy >= 0 || this.cheating;
+        }
+        /// <summary>
+        /// Tenta mover o robô na direção desejada
+        /// </summary>
+        /// <param name="direction">char representando a direção a ser movida</param>
+        public void move(char direction)
+        {
+            try
+            {
+                bool success = map.movePlayer(direction);
+                if (success)
+                {
                     energy--;
                 }
             }
@@ -67,14 +134,14 @@ namespace jewel_collector
             {
                 Console.WriteLine($"Position is occupied");
             }
-            catch (OutOfMapException e)
+            catch (CoordOutOfBoundsException e)
             {
                 Console.WriteLine($"Position is out of map");
             }
             catch (Exception e)
             {
                 Console.WriteLine($"Position is prohibit");
-            }    
+            }
         }
     }
 }

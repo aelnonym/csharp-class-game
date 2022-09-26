@@ -5,9 +5,13 @@ using System.Threading.Tasks;
 
 namespace jewel_collector
 {
-    public class OutOfMapException : Exception {}
+    public class CoordOutOfBoundsException : Exception {}
 
     public class OccupiedPositionException : Exception {}
 
     public class RanOutOfEnergyException : Exception {}
+
+    public class UnrecognizedDirection : Exception {}
+
+    public class StuckException : Exception {}
 }

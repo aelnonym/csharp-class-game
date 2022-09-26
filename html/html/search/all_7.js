@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['radiation_0',['Radiation',['../classjewel__collector_1_1_radiation.html',1,'jewel_collector']]],
-  ['ranoutofenergyexception_1',['RanOutOfEnergyException',['../classjewel__collector_1_1_ran_out_of_energy_exception.html',1,'jewel_collector']]],
-  ['rechargeable_2',['Rechargeable',['../interfacejewel__collector_1_1_rechargeable.html',1,'jewel_collector']]],
-  ['robot_3',['Robot',['../classjewel__collector_1_1_robot.html',1,'jewel_collector']]]
+  ['jewel_0',['Jewel',['../classjewel__collector_1_1_jewel.html',1,'jewel_collector']]],
+  ['jewel_5fcollector_1',['jewel_collector',['../namespacejewel__collector.html',1,'']]],
+  ['jewelcollector_2',['JewelCollector',['../class_jewel_collector.html',1,'']]]
 ];

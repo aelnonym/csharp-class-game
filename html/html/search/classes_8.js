@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['water_0',['Water',['../classjewel__collector_1_1_water.html',1,'jewel_collector']]]
+  ['stuckexception_0',['StuckException',['../classjewel__collector_1_1_stuck_exception.html',1,'jewel_collector']]]
 ];

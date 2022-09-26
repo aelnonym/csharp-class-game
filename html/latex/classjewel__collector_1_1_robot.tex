@@ -12,33 +12,149 @@ Inheritance diagram for jewel\+\_\+collector.\+Robot\+:\begin{figure}[H]
 \mbox{\Hypertarget{classjewel__collector_1_1_robot_a22993f5dbce497b691766e429d76cc9f}\label{classjewel__collector_1_1_robot_a22993f5dbce497b691766e429d76cc9f}} 
 {\bfseries Robot} (\mbox{\hyperlink{classjewel__collector_1_1_map}{Map}} map)
 \item 
-\mbox{\Hypertarget{classjewel__collector_1_1_robot_ad904d8fdf056f718784550696a18412c}\label{classjewel__collector_1_1_robot_ad904d8fdf056f718784550696a18412c}} 
-void {\bfseries collect} (List$<$ \mbox{\hyperlink{classjewel__collector_1_1_prop}{Prop}} $>$ jewels)
-\item 
-\mbox{\Hypertarget{classjewel__collector_1_1_robot_a510205a381b3d61d71e461079531df58}\label{classjewel__collector_1_1_robot_a510205a381b3d61d71e461079531df58}} 
-void {\bfseries recharge} (int qtd)
-\item 
-\mbox{\Hypertarget{classjewel__collector_1_1_robot_aacc678c37ba4058bd46195f367d0b72d}\label{classjewel__collector_1_1_robot_aacc678c37ba4058bd46195f367d0b72d}} 
-void {\bfseries collect} ()
-\item 
-\mbox{\Hypertarget{classjewel__collector_1_1_robot_aa61c1a475cd495a2709d1bf56ada52eb}\label{classjewel__collector_1_1_robot_aa61c1a475cd495a2709d1bf56ada52eb}} 
-void {\bfseries collect} (\mbox{\hyperlink{classjewel__collector_1_1_jewel}{Jewel}} jewel)
-\item 
-\mbox{\Hypertarget{classjewel__collector_1_1_robot_a201ae7ea08f664e265c02d4e17028efe}\label{classjewel__collector_1_1_robot_a201ae7ea08f664e265c02d4e17028efe}} 
-int {\bfseries get\+Backpack\+Size} ()
-\item 
-\mbox{\Hypertarget{classjewel__collector_1_1_robot_ac988640c7401e7ab3f13c46d309bc811}\label{classjewel__collector_1_1_robot_ac988640c7401e7ab3f13c46d309bc811}} 
-int {\bfseries get\+Backpack\+Value} ()
-\item 
-\mbox{\Hypertarget{classjewel__collector_1_1_robot_a42d11f7cad2295017e1482745a4896be}\label{classjewel__collector_1_1_robot_a42d11f7cad2295017e1482745a4896be}} 
-void {\bfseries move} (char direction)
-\end{DoxyCompactItemize}
+\mbox{\Hypertarget{classjewel__collector_1_1_robot_a5f76118e720bd666b294d52d2b818485}\label{classjewel__collector_1_1_robot_a5f76118e720bd666b294d52d2b818485}} 
+void {\bfseries status} ()
+\begin{DoxyCompactList}\small\item\em Escreve no console se Konami\+Kode estiver ativo  \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classjewel__collector_1_1_robot_abed39e02f920bcbbafbe9aad0d8528bf}{check\+Cheat\+Move}} (string \mbox{\hyperlink{classjewel__collector_1_1_robot_a42d11f7cad2295017e1482745a4896be}{move}})
+\begin{DoxyCompactList}\small\item\em Verifica se o Konami\+Kode está ativo e se a tecla passada como parâmetro é a tecla escondida  \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classjewel__collector_1_1_robot_ad904d8fdf056f718784550696a18412c}{collect}} (List$<$ \mbox{\hyperlink{classjewel__collector_1_1_prop}{Prop}} $>$ jewels)
+\begin{DoxyCompactList}\small\item\em Adiciona todas as jóias de uma lista para o inventário, inclusive carregando a energia caso a jóia possibilite  \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classjewel__collector_1_1_robot_a510205a381b3d61d71e461079531df58}{recharge}} (int qtd)
+\begin{DoxyCompactList}\small\item\em Recarrega a energia do robô com a quantidade informada  \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classjewel__collector_1_1_robot_a201ae7ea08f664e265c02d4e17028efe}{get\+Backpack\+Size}} ()
+\begin{DoxyCompactList}\small\item\em Retorna quantas joias existem no inventário  \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classjewel__collector_1_1_robot_ac988640c7401e7ab3f13c46d309bc811}{get\+Backpack\+Value}} ()
+\begin{DoxyCompactList}\small\item\em Retorna a soma dos valores das joias no inventário  \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classjewel__collector_1_1_robot_a0c50c8896b64c1315bc516dd63dc311c}\label{classjewel__collector_1_1_robot_a0c50c8896b64c1315bc516dd63dc311c}} 
+void {\bfseries Konami\+Code} ()
+\begin{DoxyCompactList}\small\item\em Ativa Konami\+Code  \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classjewel__collector_1_1_robot_ac342757293075846d5c2d3c7fd834f59}{Has\+Energy}} ()
+\begin{DoxyCompactList}\small\item\em Retorna se o robô tem energia suficiente para alguma ação, incluindo coleta da vizinhança  \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classjewel__collector_1_1_robot_a42d11f7cad2295017e1482745a4896be}{move}} (char direction)
+\begin{DoxyCompactList}\small\item\em Tenta mover o robô na direção desejada  \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Properties}
 \begin{DoxyCompactItemize}
 \item 
+int \mbox{\hyperlink{classjewel__collector_1_1_robot_a70a5e81ee4fc817e44019673d490ff2d}{energy}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Energia do robo  \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classjewel__collector_1_1_robot_abed39e02f920bcbbafbe9aad0d8528bf}\label{classjewel__collector_1_1_robot_abed39e02f920bcbbafbe9aad0d8528bf}} 
+\index{jewel\_collector.Robot@{jewel\_collector.Robot}!checkCheatMove@{checkCheatMove}}
+\index{checkCheatMove@{checkCheatMove}!jewel\_collector.Robot@{jewel\_collector.Robot}}
+\doxysubsubsection{\texorpdfstring{checkCheatMove()}{checkCheatMove()}}
+{\footnotesize\ttfamily bool jewel\+\_\+collector.\+Robot.\+check\+Cheat\+Move (\begin{DoxyParamCaption}\item[{string}]{move }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Verifica se o Konami\+Kode está ativo e se a tecla passada como parâmetro é a tecla escondida  
+
+
+\begin{DoxyParams}{Parameters}
+{\em move} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classjewel__collector_1_1_robot_ad904d8fdf056f718784550696a18412c}\label{classjewel__collector_1_1_robot_ad904d8fdf056f718784550696a18412c}} 
+\index{jewel\_collector.Robot@{jewel\_collector.Robot}!collect@{collect}}
+\index{collect@{collect}!jewel\_collector.Robot@{jewel\_collector.Robot}}
+\doxysubsubsection{\texorpdfstring{collect()}{collect()}}
+{\footnotesize\ttfamily void jewel\+\_\+collector.\+Robot.\+collect (\begin{DoxyParamCaption}\item[{List$<$ \mbox{\hyperlink{classjewel__collector_1_1_prop}{Prop}} $>$}]{jewels }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Adiciona todas as jóias de uma lista para o inventário, inclusive carregando a energia caso a jóia possibilite  
+
+
+\begin{DoxyParams}{Parameters}
+{\em jewels} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjewel__collector_1_1_robot_a201ae7ea08f664e265c02d4e17028efe}\label{classjewel__collector_1_1_robot_a201ae7ea08f664e265c02d4e17028efe}} 
+\index{jewel\_collector.Robot@{jewel\_collector.Robot}!getBackpackSize@{getBackpackSize}}
+\index{getBackpackSize@{getBackpackSize}!jewel\_collector.Robot@{jewel\_collector.Robot}}
+\doxysubsubsection{\texorpdfstring{getBackpackSize()}{getBackpackSize()}}
+{\footnotesize\ttfamily int jewel\+\_\+collector.\+Robot.\+get\+Backpack\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retorna quantas joias existem no inventário  
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classjewel__collector_1_1_robot_ac988640c7401e7ab3f13c46d309bc811}\label{classjewel__collector_1_1_robot_ac988640c7401e7ab3f13c46d309bc811}} 
+\index{jewel\_collector.Robot@{jewel\_collector.Robot}!getBackpackValue@{getBackpackValue}}
+\index{getBackpackValue@{getBackpackValue}!jewel\_collector.Robot@{jewel\_collector.Robot}}
+\doxysubsubsection{\texorpdfstring{getBackpackValue()}{getBackpackValue()}}
+{\footnotesize\ttfamily int jewel\+\_\+collector.\+Robot.\+get\+Backpack\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retorna a soma dos valores das joias no inventário  
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classjewel__collector_1_1_robot_ac342757293075846d5c2d3c7fd834f59}\label{classjewel__collector_1_1_robot_ac342757293075846d5c2d3c7fd834f59}} 
+\index{jewel\_collector.Robot@{jewel\_collector.Robot}!HasEnergy@{HasEnergy}}
+\index{HasEnergy@{HasEnergy}!jewel\_collector.Robot@{jewel\_collector.Robot}}
+\doxysubsubsection{\texorpdfstring{HasEnergy()}{HasEnergy()}}
+{\footnotesize\ttfamily bool jewel\+\_\+collector.\+Robot.\+Has\+Energy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retorna se o robô tem energia suficiente para alguma ação, incluindo coleta da vizinhança  
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classjewel__collector_1_1_robot_a42d11f7cad2295017e1482745a4896be}\label{classjewel__collector_1_1_robot_a42d11f7cad2295017e1482745a4896be}} 
+\index{jewel\_collector.Robot@{jewel\_collector.Robot}!move@{move}}
+\index{move@{move}!jewel\_collector.Robot@{jewel\_collector.Robot}}
+\doxysubsubsection{\texorpdfstring{move()}{move()}}
+{\footnotesize\ttfamily void jewel\+\_\+collector.\+Robot.\+move (\begin{DoxyParamCaption}\item[{char}]{direction }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Tenta mover o robô na direção desejada  
+
+
+\begin{DoxyParams}{Parameters}
+{\em direction} & char representando a direção a ser movida\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjewel__collector_1_1_robot_a510205a381b3d61d71e461079531df58}\label{classjewel__collector_1_1_robot_a510205a381b3d61d71e461079531df58}} 
+\index{jewel\_collector.Robot@{jewel\_collector.Robot}!recharge@{recharge}}
+\index{recharge@{recharge}!jewel\_collector.Robot@{jewel\_collector.Robot}}
+\doxysubsubsection{\texorpdfstring{recharge()}{recharge()}}
+{\footnotesize\ttfamily void jewel\+\_\+collector.\+Robot.\+recharge (\begin{DoxyParamCaption}\item[{int}]{qtd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Recarrega a energia do robô com a quantidade informada  
+
+
+\begin{DoxyParams}{Parameters}
+{\em qtd} & quantia de energia\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Property Documentation}
 \mbox{\Hypertarget{classjewel__collector_1_1_robot_a70a5e81ee4fc817e44019673d490ff2d}\label{classjewel__collector_1_1_robot_a70a5e81ee4fc817e44019673d490ff2d}} 
-int {\bfseries energy}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
-\end{DoxyCompactItemize}
+\index{jewel\_collector.Robot@{jewel\_collector.Robot}!energy@{energy}}
+\index{energy@{energy}!jewel\_collector.Robot@{jewel\_collector.Robot}}
+\doxysubsubsection{\texorpdfstring{energy}{energy}}
+{\footnotesize\ttfamily int jewel\+\_\+collector.\+Robot.\+energy\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Energia do robo  
+
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
