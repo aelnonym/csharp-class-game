@@ -1,5 +1,9 @@
 var hierarchy =
 [
+    [ "jewel_collector.Collectable", "interfacejewel__collector_1_1_collectable.html", [
+      [ "jewel_collector.Jewel", "classjewel__collector_1_1_jewel.html", null ]
+    ] ],
+    [ "jewel_collector.Command", "classjewel__collector_1_1_command.html", null ],
     [ "JewelCollector", "class_jewel_collector.html", null ],
     [ "jewel_collector.Map", "classjewel__collector_1_1_map.html", null ],
     [ "jewel_collector.Prop", "classjewel__collector_1_1_prop.html", [

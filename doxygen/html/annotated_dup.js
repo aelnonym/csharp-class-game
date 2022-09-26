@@ -1,6 +1,8 @@
 var annotated_dup =
 [
     [ "jewel_collector", "namespacejewel__collector.html", [
+      [ "Collectable", "interfacejewel__collector_1_1_collectable.html", null ],
+      [ "Command", "classjewel__collector_1_1_command.html", null ],
       [ "Jewel", "classjewel__collector_1_1_jewel.html", null ],
       [ "Map", "classjewel__collector_1_1_map.html", "classjewel__collector_1_1_map" ],
       [ "Obstacle", "classjewel__collector_1_1_obstacle.html", "classjewel__collector_1_1_obstacle" ],

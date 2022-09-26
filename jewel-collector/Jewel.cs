@@ -6,7 +6,7 @@ using jewel_collector;
 
 namespace jewel_collector
 {
-    public class Jewel : Prop, Collectable
+    public class Jewel : Prop
     {
         public Jewel(string type){
             this.type = type;

@@ -1,53 +1,73 @@
 ﻿using jewel_collector;
 public class JewelCollector
 {
+
+    delegate void Move(char direction);
+
+    static event Move OnMove; 
     public static void Main() {
-        bool running = true;
-        ConsoleKeyInfo keyinfo;
+        
          // Crie Mapa Dimensao 10x10
         Console.WriteLine("Creating Map");
-        Map mapa = new Map(10, 10);
+        int w = 10;
+        int h = 10;
+        int level = 1;
 
-        // Crie e Insira Joias
-        mapa.insertProp(new Jewel("RED"), 1, 9);
-        mapa.insertProp(new Jewel("RED"), 8, 8);
-        mapa.insertProp(new Jewel("GREEN"), 9, 1);
-        mapa.insertProp(new Jewel("GREEN"), 7, 6);
-        mapa.insertProp(new Jewel("BLUE"), 3, 4);
-        mapa.insertProp(new Jewel("BLUE"), 2, 1);
+        while(true){
+            try {
+                Map mapa = new Map(w, h, level);
+                Robot player = new Robot(mapa);
+                mapa.setPlayer(player, 0, 0);
 
-        // Crie e insira Obstaculos
-        foreach(int i in Enumerable.Range(0, 7)){
-            mapa.insertProp(new Obstacle("WATER"), 5, i);
+                Console.WriteLine($"Level: {level}");
+                bool Result = run(player, mapa);
+
+                if(Result) {
+                    w++;
+                    h++;
+                    level++;
+                    if(w > 30){
+                        Console.WriteLine("WIN");
+                        break;
+                    }
+                } else {
+                    break;
+                }
+            }
+            catch(RanOutOfEnergyException e) {
+                Console.WriteLine("Robot ran out of energy!");
+            }
         }
+    }
 
-        mapa.insertProp(new Obstacle("TREE"), 5, 9);
-        mapa.insertProp(new Obstacle("TREE"), 3, 9);
-        mapa.insertProp(new Obstacle("TREE"), 8, 3);
-        mapa.insertProp(new Obstacle("TREE"), 2, 5);
-        mapa.insertProp(new Obstacle("TREE"), 1, 4);
-
-        // Crie o Robo
-        Robot player = new Robot();
-        mapa.setPlayer(player, 0, 0);
+    private static bool run(Robot robot, Map mapa){
+        OnMove += robot.move;
 
         do {
             Console.WriteLine("Enter the command: ");
-            string command = Console.ReadLine();
+            //string command = Console.ReadLine();
 
-            if (command.Equals("quit")) {
-                running = false;
-            } else if (command.Equals("w") || command.Equals("a") || command.Equals("s") || command.Equals("d")) { 
-                Console.Clear();
-                if(mapa.movePlayer(command[0]) != 0){
-                    Console.WriteLine("Obstacle");
-                }
-                mapa.show();
-            } else if (command.Equals("g")) {
-                Console.Clear();
-                mapa.show();
+            mapa.show();
+            ConsoleKeyInfo command = Console.ReadKey(true);
+            Console.Clear();
+
+            switch (command.Key.ToString())
+            {
+                case "W":
+                case "S" :
+                case "D" :
+                case "A" : OnMove(command.Key.ToString()[0]); break;
+                case "G" : robot.collect(mapa.getNeighborhood(robot.X, robot.Y));break;
+                case "O" : return true; //Debug, instawin
+                case "Escape" : return false;
+                default: Console.WriteLine(command.Key.ToString()); break;
             }
-        } while (running);
+
+        } while (!mapa.isDone());
+
+        OnMove -= robot.move;
+
+        return true;
     }
 
     

@@ -5,8 +5,8 @@ using System.Threading.Tasks;
 
 namespace jewel_collector
 {
-    public interface Collectable
+    public interface Rechargeable
     {
-        
+        public void Recharge(Robot r);
     }
 }

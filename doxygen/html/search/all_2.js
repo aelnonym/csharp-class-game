@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['map_0',['Map',['../classjewel__collector_1_1_map.html',1,'jewel_collector.Map'],['../classjewel__collector_1_1_map.html#a1561b048f979d5ac377d8422a64b5e54',1,'jewel_collector.Map.Map()']]]
+  ['jewel_0',['Jewel',['../classjewel__collector_1_1_jewel.html',1,'jewel_collector']]],
+  ['jewel_5fcollector_1',['jewel_collector',['../namespacejewel__collector.html',1,'']]],
+  ['jewelcollector_2',['JewelCollector',['../class_jewel_collector.html',1,'']]]
 ];
