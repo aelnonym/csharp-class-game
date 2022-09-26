@@ -39,6 +39,10 @@ namespace jewel_collector
         /// <value></value>
         public int value{get; set;}
 
+        public ConsoleColor textColor{get; set;}
+
+        public ConsoleColor backgroundColor{get; set;}
+
         public string type{get; set;}
 
         /// <summary>

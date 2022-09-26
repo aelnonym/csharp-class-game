@@ -18,14 +18,20 @@ namespace jewel_collector
                 case "WATER":
                     this.image = "##";
                     this.value = 100;
+                    this.backgroundColor = ConsoleColor.DarkBlue;
+                    this.textColor = ConsoleColor.White;
                     break;
                 case "TREE":
                     this.image = "$$";
                     this.value = 10;
+                    this.backgroundColor = ConsoleColor.DarkGreen;
+                    this.textColor = ConsoleColor.Green;
                     break;
                 default:
                     this.image = "O?";
                     this.value = 0;
+                    this.backgroundColor = ConsoleColor.Red;
+                    this.textColor = ConsoleColor.Red;
                     break;
             }
         }

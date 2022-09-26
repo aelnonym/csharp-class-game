@@ -10,7 +10,7 @@ namespace jewel_collector
         private Robot player;
         private Prop[,] map;
 
-        private int level;
+        public int level{get; set;}
 
         private static Random _rand = new Random(Guid.NewGuid().GetHashCode());
 
@@ -383,10 +383,18 @@ namespace jewel_collector
         /// <param name="debug"></param>
         public void show(bool debug = false){
             
-            for (int i = 0; i < this.map.GetLength(0); i++){
-                for (int j = 0; j < this.map.GetLength(1); j++) {
+            for (int i = 0; i < this.getMaxX(); i++){
+                for (int j = 0; j < this.getMaxY(); j++) {
+                    if(this.map[i,j] == null){
+                        Console.ForegroundColor = ConsoleColor.Gray;
+                        Console.BackgroundColor = ConsoleColor.White;
+                    } else {
+                        Console.ForegroundColor = this.map[i,j].textColor;
+                        Console.BackgroundColor = this.map[i,j].backgroundColor;
+                    }
                     Console.Write(this.map[i,j] != null?this.map[i,j].ToString():"-- ");
                 }
+                Console.ResetColor();
                 Console.Write("\n");
                 if(debug){
                     for (int j = 0; j < this.map.GetLength(1); j++) {

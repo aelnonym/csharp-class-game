@@ -31,6 +31,8 @@ namespace jewel_collector
             this.map = map;
             this.image = "ME";
             this.energy = 5;
+            this.backgroundColor = ConsoleColor.Black;
+            this.textColor = ConsoleColor.White;
         }
 
         /// <summary>
@@ -40,7 +42,14 @@ namespace jewel_collector
         {
             if (cheating)
             {
-                Console.WriteLine("KonamiCode Enabled!");
+                string msg = "KonamiCode Enabled!";
+                for(int i = 0; i < msg.Length; i++){
+                    Console.ForegroundColor = (System.ConsoleColor)((map.level + i) % 16);
+                    Console.BackgroundColor = (System.ConsoleColor)((map.level + 2 + i) % 16);
+                    Console.Write(msg[i]);
+                }
+                Console.ResetColor();
+                Console.WriteLine();
             }
         }
         /// <summary>

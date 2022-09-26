@@ -12,6 +12,8 @@ namespace jewel_collector
 
         public Radiation(){
             this.image = "!!";
+            this.backgroundColor = ConsoleColor.DarkYellow;
+            this.textColor = ConsoleColor.DarkRed;
         }
         /// <summary>
         /// Recarga negativa do consumo da radiação na mesma posição do robo r
